@@ -53,6 +53,14 @@ You can then execute your native executable with: `./target/teste-code-with-quar
 
 If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
 
+## Running tests
+
+To run the tests, use:
+
+```shell script
+./mvnw clean test
+```
+
 ## Related Guides
 
 - JDBC Driver - H2 ([guide](https://quarkus.io/guides/datasource)): Connect to the H2 database via JDBC

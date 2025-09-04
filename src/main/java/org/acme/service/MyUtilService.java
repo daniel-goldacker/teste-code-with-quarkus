@@ -1,22 +1,18 @@
 package org.acme.service;
 
+import org.acme.util.CalcUtil;
+
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class MyUtilService {
 
-    public boolean isPrimeNumber(int number){
-        if (number <= 1) {
-            return false;
-        }
+    @Inject
+    CalcUtil calcUtil;
 
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0){
-                return false;
-            }
-            
-        }
-        return true;
+    public boolean isPrimeNumber(int number){
+        return calcUtil.verifyPrimeNumber(number);
     }
 
     public int countCharacters(String input){
